@@ -3,6 +3,8 @@ apply plugin: 'war'
 apply plugin: 'idea'
 apply plugin: 'eclipse'
 
+group = 'org.kndl'
+
 repositories {
 	mavenCentral()
 }

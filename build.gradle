@@ -2,16 +2,40 @@ apply plugin: 'java'
 apply plugin: 'war'
 apply plugin: 'idea'
 apply plugin: 'eclipse'
+apply plugin: 'gradle-one-jar'
 
-group = 'org.kndl'
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.github.rholder:gradle-one-jar:1.0.4'
+    }
+}
 
 repositories {
 	mavenCentral()
 }
 
 dependencies {
-	
-	// Hibernate
+
+    // Jetty
+
+    compile 'org.eclipse.jetty:jetty-webapp:9.2.2.v20140723'
+    compile 'org.eclipse.jetty:jetty-server:9.2.2.v20140723'
+    compile 'org.eclipse.jetty:jetty-servlet:9.2.2.v20140723'
+
+    // Oracle JEE 7
+
+    compile 'javax:javaee-api:7.0'
+
+    // SLF4j
+
+    compile 'org.slf4j:slf4j-api:1.7.7'
+    compile 'org.slf4j:slf4j-log4j12:1.7.7'
+    compile 'org.slf4j:slf4j-jdk14:1.7.7'
+
+    // Hibernate
 
 	compile 'org.hibernate:hibernate-core:4.3.6.Final'
 	compile 'org.hibernate:hibernate-entitymanager:4.3.6.Final'
@@ -21,5 +45,11 @@ dependencies {
 
 	compile 'org.springframework:spring-core:4.0.6.RELEASE'
 	compile 'org.springframework:spring-webmvc:4.0.6.RELEASE'
+
+    // Jackson (for JSON)
+
+    compile 'com.fasterxml.jackson.core:jackson-core:2.4.1.1'
+    compile 'com.fasterxml.jackson.core:jackson-annotations:2.4.1'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.4.1.1'
 
 }

@@ -2,28 +2,12 @@ apply plugin: 'java'
 apply plugin: 'war'
 apply plugin: 'idea'
 apply plugin: 'eclipse'
-apply plugin: 'gradle-one-jar'
-
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'com.github.rholder:gradle-one-jar:1.0.4'
-    }
-}
 
 repositories {
 	mavenCentral()
 }
 
 dependencies {
-
-    // Jetty
-
-    compile 'org.eclipse.jetty:jetty-webapp:9.2.2.v20140723'
-    compile 'org.eclipse.jetty:jetty-server:9.2.2.v20140723'
-    compile 'org.eclipse.jetty:jetty-servlet:9.2.2.v20140723'
 
     // Oracle JEE 7
 

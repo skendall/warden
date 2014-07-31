@@ -24,16 +24,24 @@ dependencies {
 	compile 'org.hibernate:hibernate-core:4.3.6.Final'
 	compile 'org.hibernate:hibernate-entitymanager:4.3.6.Final'
 	compile 'org.hibernate:hibernate-c3p0:4.3.6.Final'
-	
-	// Spring
+    compile 'org.hibernate.common:hibernate-commons-annotations:4.0.5.Final'
+
+    // Spring
 
 	compile 'org.springframework:spring-core:4.0.6.RELEASE'
 	compile 'org.springframework:spring-webmvc:4.0.6.RELEASE'
+    compile 'org.springframework:spring-tx:4.0.6.RELEASE'
+    compile 'org.springframework:spring-jdbc:4.0.6.RELEASE'
+    compile 'org.springframework:spring-orm:4.0.6.RELEASE'
 
     // Jackson (for JSON)
 
     compile 'com.fasterxml.jackson.core:jackson-core:2.4.1.1'
     compile 'com.fasterxml.jackson.core:jackson-annotations:2.4.1'
     compile 'com.fasterxml.jackson.core:jackson-databind:2.4.1.1'
+
+    // MySQL
+
+    compile 'mysql:mysql-connector-java:5.1.31'
 
 }

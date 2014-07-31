@@ -1,5 +1,6 @@
 package org.kndl.warden;
 
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
@@ -12,7 +13,7 @@ public class WebInitializer implements WebApplicationInitializer {
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
         AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();
-        ctx.register(APIConfig.class);
+        ctx.register(APIConfig.class,PersistenceConfig.class);
 
         ctx.setServletContext(servletContext);
 

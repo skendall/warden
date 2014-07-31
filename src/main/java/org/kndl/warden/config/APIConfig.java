@@ -1,4 +1,4 @@
-package org.kndl.warden;
+package org.kndl.warden.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

@@ -11,25 +11,25 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
 
     @Autowired
-    private UserDao dao;
+    private UserDao userDao;
 
     @Override
     public User getUserById(long id) {
-        return dao.getById(id);
+        return userDao.getById(id);
     }
 
     @Override
-    public void storeUser(User user) {
-        dao.save(user);
+    public User storeUser(User user) {
+        return userDao.save(user);
     }
 
     @Override
     public List<User> getUsers() {
-        return dao.get();
+        return userDao.get();
     }
 
     @Override
     public void deleteUser(User user) {
-        dao.delete(user);
+        userDao.delete(user);
     }
 }

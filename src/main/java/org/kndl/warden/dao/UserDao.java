@@ -11,7 +11,7 @@ public class UserDao extends AbstractDAO<User> {
 
     @Override
     public User getById(long id) {
-        return (User)getSessionFactory().getCurrentSession().byId(User.class).load(id);
+        return (User)getSessionFactory().getCurrentSession().get(User.class,id);
     }
 
     @Override

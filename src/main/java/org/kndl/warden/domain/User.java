@@ -6,11 +6,6 @@ import java.io.Serializable;
 @Entity
 public class User implements Serializable {
 
-    public User(String email, String password) {
-        this.email = email;
-        this.password = password;
-    }
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;

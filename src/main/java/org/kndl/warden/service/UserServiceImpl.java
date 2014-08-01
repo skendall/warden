@@ -19,7 +19,10 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User storeUser(User user) {
+    public User storeUser(String email, String password) {
+        User user = new User();
+        user.setEmail(email);
+        user.setPassword(password);
         return userDao.save(user);
     }
 
